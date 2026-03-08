@@ -1,0 +1,5 @@
+{
+  "name": "FXIFY Futures Clone",
+  "description": "A pixel-perfect clone of the FXIFY Futures landing page with Framer Motion animations and Tailwind CSS.",
+  "requestFramePermissions": []
+}
