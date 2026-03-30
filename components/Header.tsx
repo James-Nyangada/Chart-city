@@ -1,20 +1,26 @@
 import { motion } from 'motion/react';
 import { DiscordIcon } from './icons';
+import Link from 'next/link';
 
 export function Header() {
   return (
     <header className="fixed top-0 w-full z-50 px-8 py-4 flex justify-between items-center backdrop-blur-lg bg-[#04040B]/60 border-b border-white/[0.05]">
       <div className="flex items-center gap-2">
-        <span className="font-space-grotesk font-bold text-xl text-white tracking-widest">
+        <Link href="/" className="font-outfit font-bold text-xl text-white tracking-widest">
           CHART CITY
-        </span>
+        </Link>
       </div>
       
       <nav className="hidden md:flex items-center gap-8">
-        {['The Continents', 'Economy', 'Movement', 'Market'].map((item) => (
-          <a key={item} href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-sm text-gray-400 hover:text-white transition-colors">
-            {item}
-          </a>
+        {[
+          { label: 'The Continents', href: '/continents' },
+          { label: 'Economy', href: '/economy' },
+          { label: 'Movement', href: '/movement' },
+          { label: 'Market', href: '/market' }
+        ].map((item) => (
+          <Link key={item.label} href={item.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+            {item.label}
+          </Link>
         ))}
       </nav>
 
