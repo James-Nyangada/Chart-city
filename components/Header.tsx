@@ -15,7 +15,6 @@ export function Header() {
         {[
           { label: 'The Continents', href: '/continents' },
           { label: 'Economy', href: '/economy' },
-          { label: 'Movement', href: '/movement' },
           { label: 'Market', href: '/market' }
         ].map((item) => (
           <Link key={item.label} href={item.href} className="text-sm text-gray-400 hover:text-white transition-colors">
